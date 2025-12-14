@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="520" fill="#f7fafc"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Inter, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#1a202c" text-anchor="middle">The Repetition Problem: JSON vs TOON</text>
+  
+  <!-- ==================== JSON SIDE ==================== -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="70" width="380" height="380" rx="12" fill="white"/>
+    <rect x="40" y="70" width="380" height="50" rx="12" fill="#e53e3e"/>
+    <rect x="40" y="100" width="380" height="20" fill="#e53e3e"/>
+    <text x="230" y="102" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">JSON Format</text>
+  </g>
+  
+  <!-- JSON Code -->
+  <g transform="translate(60, 140)">
+    <rect x="0" y="0" width="340" height="200" rx="8" fill="#2d3748"/>
+    
+    <text x="15" y="28" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#e2e8f0">{</text>
+    <text x="15" y="48" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#e2e8f0">  "users": [</text>
+    
+    <!-- Record 1 -->
+    <text x="15" y="73" font-family="SF Mono, Monaco, monospace" font-size="11">
+      <tspan fill="#e2e8f0">    { </tspan>
+      <tspan fill="#fc8181" font-weight="bold">"id"</tspan><tspan fill="#e2e8f0">: 1, </tspan>
+      <tspan fill="#fc8181" font-weight="bold">"name"</tspan><tspan fill="#e2e8f0">: "Alice", </tspan>
+      <tspan fill="#fc8181" font-weight="bold">"role"</tspan><tspan fill="#e2e8f0">: "admin" },</tspan>
+    </text>
+    
+    <!-- Record 2 -->
+    <text x="15" y="98" font-family="SF Mono, Monaco, monospace" font-size="11">
+      <tspan fill="#e2e8f0">    { </tspan>
+      <tspan fill="#fc8181" font-weight="bold">"id"</tspan><tspan fill="#e2e8f0">: 2, </tspan>
+      <tspan fill="#fc8181" font-weight="bold">"name"</tspan><tspan fill="#e2e8f0">: "Bob", </tspan>
+      <tspan fill="#fc8181" font-weight="bold">"role"</tspan><tspan fill="#e2e8f0">: "user" },</tspan>
+    </text>
+    
+    <!-- Record 3 -->
+    <text x="15" y="123" font-family="SF Mono, Monaco, monospace" font-size="11">
+      <tspan fill="#e2e8f0">    { </tspan>
+      <tspan fill="#fc8181" font-weight="bold">"id"</tspan><tspan fill="#e2e8f0">: 3, </tspan>
+      <tspan fill="#fc8181" font-weight="bold">"name"</tspan><tspan fill="#e2e8f0">: "Charlie", </tspan>
+      <tspan fill="#fc8181" font-weight="bold">"role"</tspan><tspan fill="#e2e8f0">: "user" }</tspan>
+    </text>
+    
+    <text x="15" y="148" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#e2e8f0">  ]</text>
+    <text x="15" y="168" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#e2e8f0">}</text>
+  </g>
+  
+  <!-- JSON Repetition Count -->
+  <g transform="translate(60, 355)">
+    <text x="170" y="0" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#2d3748" text-anchor="middle">Key Appearances:</text>
+    
+    <!-- Count boxes -->
+    <g transform="translate(20, 15)">
+      <rect x="0" y="0" width="90" height="55" rx="6" fill="#fed7d7"/>
+      <text x="45" y="22" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#c53030" text-anchor="middle" font-weight="600">"id"</text>
+      <text x="45" y="44" font-family="Inter, -apple-system, sans-serif" font-size="18" fill="#c53030" text-anchor="middle" font-weight="700">× 3</text>
+    </g>
+    
+    <g transform="translate(125, 15)">
+      <rect x="0" y="0" width="90" height="55" rx="6" fill="#fed7d7"/>
+      <text x="45" y="22" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#c53030" text-anchor="middle" font-weight="600">"name"</text>
+      <text x="45" y="44" font-family="Inter, -apple-system, sans-serif" font-size="18" fill="#c53030" text-anchor="middle" font-weight="700">× 3</text>
+    </g>
+    
+    <g transform="translate(230, 15)">
+      <rect x="0" y="0" width="90" height="55" rx="6" fill="#fed7d7"/>
+      <text x="45" y="22" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#c53030" text-anchor="middle" font-weight="600">"role"</text>
+      <text x="45" y="44" font-family="Inter, -apple-system, sans-serif" font-size="18" fill="#c53030" text-anchor="middle" font-weight="700">× 3</text>
+    </g>
+  </g>
+  
+  <!-- ==================== ARROW ==================== -->
+  <g transform="translate(450, 280)">
+    <polygon points="0,-15 25,0 0,15" fill="#667eea"/>
+  </g>
+  
+  <!-- ==================== TOON SIDE ==================== -->
+  <g filter="url(#shadow)">
+    <rect x="480" y="70" width="380" height="380" rx="12" fill="white"/>
+    <rect x="480" y="70" width="380" height="50" rx="12" fill="#38a169"/>
+    <rect x="480" y="100" width="380" height="20" fill="#38a169"/>
+    <text x="670" y="102" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">TOON Format</text>
+  </g>
+  
+  <!-- TOON Code -->
+  <g transform="translate(500, 140)">
+    <rect x="0" y="0" width="340" height="200" rx="8" fill="#2d3748"/>
+    
+    <!-- Header line with keys -->
+    <text x="15" y="35" font-family="SF Mono, Monaco, monospace" font-size="13">
+      <tspan fill="#e2e8f0">users[3]{</tspan><tspan fill="#68d391" font-weight="bold">id</tspan><tspan fill="#e2e8f0">,</tspan><tspan fill="#68d391" font-weight="bold">name</tspan><tspan fill="#e2e8f0">,</tspan><tspan fill="#68d391" font-weight="bold">role</tspan><tspan fill="#e2e8f0">}:</tspan>
+    </text>
+    
+    <!-- Data rows - no keys, just values -->
+    <text x="15" y="75" font-family="SF Mono, Monaco, monospace" font-size="13" fill="#a0aec0">1,Alice,admin</text>
+    <text x="15" y="100" font-family="SF Mono, Monaco, monospace" font-size="13" fill="#a0aec0">2,Bob,user</text>
+    <text x="15" y="125" font-family="SF Mono, Monaco, monospace" font-size="13" fill="#a0aec0">3,Charlie,user</text>
+  </g>
+  
+  <!-- TOON Repetition Count -->
+  <g transform="translate(500, 355)">
+    <text x="170" y="0" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#2d3748" text-anchor="middle">Key Appearances:</text>
+    
+    <!-- Count boxes -->
+    <g transform="translate(20, 15)">
+      <rect x="0" y="0" width="90" height="55" rx="6" fill="#c6f6d5"/>
+      <text x="45" y="22" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#276749" text-anchor="middle" font-weight="600">id</text>
+      <text x="45" y="44" font-family="Inter, -apple-system, sans-serif" font-size="18" fill="#276749" text-anchor="middle" font-weight="700">× 1</text>
+    </g>
+    
+    <g transform="translate(125, 15)">
+      <rect x="0" y="0" width="90" height="55" rx="6" fill="#c6f6d5"/>
+      <text x="45" y="22" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#276749" text-anchor="middle" font-weight="600">name</text>
+      <text x="45" y="44" font-family="Inter, -apple-system, sans-serif" font-size="18" fill="#276749" text-anchor="middle" font-weight="700">× 1</text>
+    </g>
+    
+    <g transform="translate(230, 15)">
+      <rect x="0" y="0" width="90" height="55" rx="6" fill="#c6f6d5"/>
+      <text x="45" y="22" font-family="SF Mono, Monaco, monospace" font-size="12" fill="#276749" text-anchor="middle" font-weight="600">role</text>
+      <text x="45" y="44" font-family="Inter, -apple-system, sans-serif" font-size="18" fill="#276749" text-anchor="middle" font-weight="700">× 1</text>
+    </g>
+  </g>
+  
+  <!-- Bottom insight -->
+  <text x="450" y="485" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#718096" text-anchor="middle">With 100 records, JSON repeats each key 100×. TOON still uses each key just once.</text>
+  
+</svg>
