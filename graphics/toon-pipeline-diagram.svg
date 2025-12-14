@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280">
+  <defs>
+    <!-- Gradient for boxes -->
+    <linearGradient id="dbGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a67d8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="backendGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4299e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3182ce;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="toonGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48bb78;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38a169;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="llmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ed8936;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dd6b20;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#718096"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="280" fill="#f7fafc"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="600" fill="#2d3748" text-anchor="middle">TOON Integration Architecture: "Just-In-Time" Conversion Pattern</text>
+  
+  <!-- Database Box -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="80" width="160" height="100" rx="12" fill="url(#dbGradient)"/>
+    <text x="110" y="125" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Database</text>
+    <text x="110" y="150" font-family="SF Mono, Monaco, monospace" font-size="13" fill="rgba(255,255,255,0.85)" text-anchor="middle">(SQL)</text>
+    
+    <!-- Database icon -->
+    <ellipse cx="110" cy="95" rx="18" ry="6" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+    <path d="M92 95 L92 105 Q92 111 110 111 Q128 111 128 105 L128 95" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <line x1="200" y1="130" x2="250" y2="130" stroke="#718096" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+  <text x="225" y="115" font-family="SF Mono, Monaco, monospace" font-size="10" fill="#718096" text-anchor="middle">rows</text>
+  
+  <!-- Backend Box -->
+  <g filter="url(#shadow)">
+    <rect x="260" y="80" width="160" height="100" rx="12" fill="url(#backendGradient)"/>
+    <text x="340" y="125" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Backend</text>
+    <text x="340" y="150" font-family="SF Mono, Monaco, monospace" font-size="13" fill="rgba(255,255,255,0.85)" text-anchor="middle">(JSON)</text>
+    
+    <!-- Code brackets icon -->
+    <text x="340" y="98" font-family="SF Mono, Monaco, monospace" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">{ }</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="430" y1="130" x2="480" y2="130" stroke="#718096" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+  <text x="455" y="115" font-family="SF Mono, Monaco, monospace" font-size="10" fill="#718096" text-anchor="middle">objects</text>
+  
+  <!-- TOON Converter Box (highlighted) -->
+  <g filter="url(#shadow)">
+    <rect x="490" y="70" width="180" height="120" rx="12" fill="url(#toonGradient)"/>
+    <!-- Highlight border -->
+    <rect x="490" y="70" width="180" height="120" rx="12" fill="none" stroke="#276749" stroke-width="2" stroke-dasharray="0"/>
+    <text x="580" y="118" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="white" text-anchor="middle">TOON Converter</text>
+    <text x="580" y="145" font-family="SF Mono, Monaco, monospace" font-size="13" fill="rgba(255,255,255,0.85)" text-anchor="middle">(Middleware)</text>
+    
+    <!-- Conversion icon -->
+    <text x="580" y="95" font-family="SF Mono, Monaco, monospace" font-size="12" fill="rgba(255,255,255,0.8)" text-anchor="middle">{ } → [ ]</text>
+    
+    <!-- "Convert Here" badge -->
+    <rect x="525" y="165" width="110" height="22" rx="11" fill="#276749"/>
+    <text x="580" y="180" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" fill="white" text-anchor="middle">⚡ CONVERT HERE</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <line x1="680" y1="130" x2="730" y2="130" stroke="#718096" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+  <text x="705" y="115" font-family="SF Mono, Monaco, monospace" font-size="10" fill="#718096" text-anchor="middle">TOON</text>
+  
+  <!-- LLM API Box -->
+  <g filter="url(#shadow)">
+    <rect x="740" y="80" width="140" height="100" rx="12" fill="url(#llmGradient)"/>
+    <text x="810" y="125" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">LLM API</text>
+    <text x="810" y="150" font-family="SF Mono, Monaco, monospace" font-size="13" fill="rgba(255,255,255,0.85)" text-anchor="middle">(Prompt)</text>
+    
+    <!-- Brain/AI icon simplified -->
+    <circle cx="810" cy="95" r="10" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+    <circle cx="806" cy="93" r="2" fill="rgba(255,255,255,0.7)"/>
+    <circle cx="814" cy="93" r="2" fill="rgba(255,255,255,0.7)"/>
+    <path d="M805 99 Q810 103 815 99" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Token savings callout -->
+  <g>
+    <rect x="490" y="210" width="180" height="45" rx="8" fill="#f0fff4" stroke="#9ae6b4" stroke-width="1.5"/>
+    <text x="580" y="230" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#276749" text-anchor="middle">66-67% fewer tokens</text>
+    <text x="580" y="246" font-family="Inter, -apple-system, sans-serif" font-size="10" fill="#48bb78" text-anchor="middle">= Lower cost + Faster inference</text>
+  </g>
+  
+  <!-- Annotation line from callout to TOON box -->
+  <line x1="580" y1="190" x2="580" y2="205" stroke="#9ae6b4" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+</svg>
