@@ -51,6 +51,8 @@ def save_figure(fig, name, formats=['png', 'svg']):
     
     for fmt in formats:
         path = output_dir / f"{name}.{fmt}"
+        # Create parent directory if it doesn't exist
+        path.parent.mkdir(parents=True, exist_ok=True)
         fig.savefig(path, format=fmt, bbox_inches='tight', dpi=500)
         print(f"Saved: {path}")
 
